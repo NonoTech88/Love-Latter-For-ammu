@@ -1,73 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine Letter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
 
-<body>
+.no-wrapper {
+    position: relative;
+}
 
-    <h1 class="title">
-        <span>Valentine</span> Letter
-    </h1>
+.btn {
+    width: 120px;
+    cursor: pointer;
+    user-select: none;
+}
 
-    <div class="letter-window" id="letterWindow">
+.yes-btn,
+.no-btn {
+    width: 120px;
+    height: auto;
+    display: inline-block;
+}
 
-        <div class="top-bar">
-            <span>LOVE</span>
-            <span>− □ ×</span>
-        </div>
-
-        <div class="hearts">
-            ♥　♥　♥
-        </div>
-
-        <div class="inside">
-
-            <p>Will you be my Valentine?</p>
-
-            <div class="cat">
-                🐱
-            </div>
-
-            <div class="big-heart">
-                ❤️
-            </div>
-
-            <div class="buttons">
-
-                <div class="no-wrapper">
-                    <button class="btn yes-btn" onclick="yesClicked()">
-                        YES 💗
-                    </button>
-                </div>
-
-                <button class="btn no-btn" onclick="noClicked()">
-                    NO 😿
-                </button>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="message" id="message">
-        <div class="floating-hearts">
-            ❤️ 💕 💗 💖 💘
-        </div>
-
-        <h2>💖 YAYYY! 💖</h2>
-        <h1>Love You Ammu ❤️</h1>
-        <p>You are very special to me 🥰</p>
-
-        <button onclick="resetPage()" class="reset-btn">
-            Reset ↻
-        </button>
-    </div>
-
-    <script src="script.js"></script>
-
-</body>
-</html>
+.letter-window.open {
+    transform: scale(1);
+    opacity: 1;
+}
